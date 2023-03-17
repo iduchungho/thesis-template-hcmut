@@ -1,2 +1,4 @@
-# Gin-Practice-Summer23
-Simple API Go with gin-gonic/gin and gormDB, MySQL ( Summer 2023 )
+# Thesis template
+compile with XeLatex
+
+![image](https://user-images.githubusercontent.com/78150104/225962009-765db0be-6960-4f6d-b994-a183489028c5.png)
