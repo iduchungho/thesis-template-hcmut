@@ -1,0 +1,84 @@
+%!TEX root = ../Thesis.tex
+
+\chapter*{Introduction}
+\addcontentsline{toc}{part}{Introduction} % Adds "Introduction" as part-style in ToC
+\markboth{Introduction}{Introduction}    % Marks left and right headers as "Introduction"
+
+\begin{itemize}
+    \item \textup{Upright shape}
+    \item \textit{Italic shape}
+    \item \textsl{Slanted shape}
+    \item \textsc{Small Caps shape}
+    \item \textmd{Medium series}
+    \item \textbf{Bold sereies}
+    \item \textrm{Roman family}
+    \item \textsf{Sans serif family}
+    \item \texttt{Typewriter family}
+\end{itemize}
+
+I love to write special characters like øæå indside my \TeX{} document. Also á, à, ü, û, ë, ê, î, ï could be nice. So waht about the ``π'' chracter. What about ° é ® † ¥ ü | œ π ‘ @ ö ä ¬ ∆ ‹ « © ƒ ∂ ß ª Ω … ç √ ∫ ñ µ ‚ · ¡ “ £ ∞ ™ [ ] ≠ ± '.
+
+Some dashes - – —, and the latex form - -- ---
+\begin{equation*}
+    x = \mathtt{x}, \mathbf{x}, \mathit{x}, x_{1_{2_{3_{4}}}}^{1^{2^{3^{4}}}} \cdot hello * \text{hello world} ⋅ \text{my world} · \text{third world} ⊗ t
+\end{equation*}
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum \cite{adams1980hitchhiker}.
+
+Mauris id quam non magna fermentum malesuada id mattis lorem. In a dapibus neque. Etiam lacus dui, malesuada ac eleifend imperdiet, imperdiet ut ipsum. Vestibulum id ultricies est. Phasellus augue mauris, semper a luctus vel, faucibus in risus. Fusce commodo augue quis elit sagittis non viverra turpis bibendum. Nunc placerat sem non sapien malesuada malesuada ullamcorper orci luctus \cite{adams1980hitchhiker}. Morbi pharetra ligula integer mollis mi nec neque ultrices vitae volutpat leo ullamcorper. In at tellus magna. Curabitur quis posuere purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse tristique placerat feugiat. Aliquam vitae est at enim auctor ultrices eleifend a urna. Donec non tincidunt felis. Maecenas at suscipit orci. See \cref{myFigure}.
+
+\begin{figure}
+    \centering
+    \caption[Short caption to special figure]{This is my special figure. Aliquam ultricies, arcu quis tempor rhoncus, tellus nisl tempus justo, condimentum tempor erat odio ac purus. Integer quis ipsum felis. Aliquam volutpat, leo ac consequat egestas, lectus lacus adipiscing quam, id iaculis dolor quam in erat. Phasellus tempor interdum arcu quis vestibulum}
+    \label{myFigure}
+\end{figure}
+
+Fusce id suscipit sem. Aliquam venenatis nibh nec nisl luctus vel consectetur neque dapibus. Nulla feugiat egestas turpis, ac viverra eros cursus sit amet. Cras tincidunt felis vel tellus ultrices condimentum. Quisque vehicula, arcu vitae interdum dignissim, purus tortor cursus libero, sit amet accumsan quam magna in neque. Phasellus luctus leo odio. Aliquam ultricies, arcu quis tempor rhoncus, tellus nisl tempus justo, condimentum tempor erat odio ac purus. Integer quis ipsum felis. Aliquam volutpat, leo ac consequat egestas, lectus lacus adipiscing quam, id iaculis dolor quam in erat. Phasellus tempor interdum arcu quis vestibulum. Pellentesque sit amet augue purus. See \cref{myTable}.
+
+\begin{table}
+    \centering
+        \begin{tabular}{c | r l}
+            h & h & h \\
+            e & e & e \\
+        \end{tabular}
+    \caption{This is a caption to the table}
+    \label{myTable}
+\end{table}
+\newpage
+\begin{lstlisting}
+import numpy as np
+    
+def incmatrix(genl1,genl2):
+    m = len(genl1)
+    n = len(genl2)
+    M = None #to become the incidence matrix
+    VT = np.zeros((n*m,1), int)  #dummy variable
+    
+    #compute the bitwise xor matrix
+    M1 = bitxormatrix(genl1)
+    M2 = np.triu(bitxormatrix(genl2),1) 
+
+    for i in range(m-1):
+        for j in range(i+1, m):
+            [r,c] = np.where(M2 == M1[i,j])
+            for k in range(len(r)):
+                VT[(i)*n + r[k]] = 1;
+                VT[(i)*n + c[k]] = 1;
+                VT[(j)*n + r[k]] = 1;
+                VT[(j)*n + c[k]] = 1;
+                
+                if M is None:
+                    M = np.copy(VT)
+                else:
+                    M = np.concatenate((M, VT), 1)
+                
+                VT = np.zeros((n*m,1), int)
+    
+    return M
+\end{lstlisting}
+
+\begin{figure}
+    \centering
+    \caption[Short caption to special figure]{This is my special figure. Aliquam ultricies, arcu quis tempor rhoncus, tellus nisl tempus justo, condimentum tempor erat odio ac purus. Integer quis ipsum felis. Aliquam volutpat, leo ac consequat egestas, lectus lacus adipiscing quam, id iaculis dolor quam in erat. Phasellus tempor interdum arcu quis vestibulum}
+    \label{myFigure}
+\end{figure}

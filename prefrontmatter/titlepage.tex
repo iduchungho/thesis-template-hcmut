@@ -1,0 +1,26 @@
+%!TEX root = ../Thesis.tex 
+\thispagestyle{empty}             % No page numbers
+\calccentering{\unitlength}
+\begin{adjustwidth*}{\unitlength}{-\unitlength}
+    \begin{adjustwidth}{-0.5cm}{-0.5cm}
+        \sffamily
+        \begin{flushright}
+            \thesistype\\*[0cm]
+            \thesistypeabbr \\
+        \end{flushright}
+        \vspace*{\fill}
+        \noindent
+        % \includegraphics[width=0.8\textwidth]{graphics/HCMUT.png}\\*[0.2cm]
+        \university
+        \HUGE \textbf{\thesistitle}\\*[0.6cm]
+        % \huge \thesissubtitle \\*[0.6cm]
+        \parbox[b]{0.5\linewidth}{
+        \huge \thesisauthor\\*[1.2cm]
+        \large\thesislocation{}, \the\year
+        } 
+        
+        \hfill\includegraphics[scale=0.14]{graphics/bklogo.png}
+    \end{adjustwidth}
+\end{adjustwidth*}
+\normalfont
+\normalsize
